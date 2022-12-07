@@ -1,0 +1,126 @@
+/* Overlay for background image */
+.hero {
+  background-color: var(--overlay);
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-left: 25%;
+  padding-left: 10%;
+}
+
+.hero::before {
+  content: "";
+  background: url("./images/hero.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero .content {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1245;
+  margin-top: auto;
+  padding: 1rem;
+}
+
+.hero .content a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Get different styled p tags using child elements */
+.hero .content p:first-child {
+  margin-top: 5rem;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.hero .content p:nth-child(2) {
+  font-size: 3rem;
+  font-style: italic;
+}
+
+.hero .content p:nth-child(3) {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero .content p:nth-child(4) {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.hero .button {
+  margin: 1rem 0;
+}
+
+.hero .content button {
+  margin-top: 2rem;
+}
+
+.mobileButton {
+  display: none;
+}
+
+/* For mobile and smaller screens below 940 */
+@media screen and (max-width: 940px) {
+  .desktopButton {
+    display: none;
+  }
+
+  .mobileButton {
+    display: contents;
+  }
+
+  .hero {
+    padding-left: 5%;
+  }
+
+  .hero::before {
+    content: "";
+    background: url("./images/hero.jpg") no-repeat cover;
+    background-position: 10% 0%;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .hero .content {
+    height: 70%;
+  }
+
+  .hero .content {
+    line-height: 2rem;
+  }
+
+  .hero .content p:nth-child(2) {
+    font-size: 1.3rem;
+  }
+
+  .hero .content p:nth-child(3) {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  .hero .content p:nth-child(1) {
+    font-size: 1rem;
+  }
+
+  .hero .content p:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .hero .content p:nth-child(3) {
+    font-size: 1.2rem;
+  }
+}
