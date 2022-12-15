@@ -39,17 +39,29 @@ const Navbar = () => {
   return (
     <div className="header">
       <div className="Top">
-        <p className="RingText"> Ring</p>
+        {/* <p className="RingText"> Ring</p> */}
         <p>
           {" "}
           Tlf:{" "}
           <a className="phone" href="Tel:95223314">
-            95 22 33 14{". "}
+            95 22 33 14.{" "}
           </a>
           {/* Check if it is open (09-17) and not a saturday/sunday 
             (dayToday show from 0 - 6),  Sunday and Saturday are 0 and 6, so doing a modulo operator (%)
             to see if something more than 0 remains ( 6 % 6 = 0  and 0 % 6 = 0) */}
-          Man - Fre: 09.00 - 17.00. {dateToday() >= 9 && dateToday() < 17 && dayToday() % 6 !== 0 ? <a>Åpent 🟢</a> : <a>Stengt 🔴</a>}
+          Man - Fre: 09.00 - 17.00.{" "}
+          {dateToday() >= 9 && dateToday() < 17 && dayToday() % 6 !== 0 ? (
+            <>
+              {" "}
+              <a className="openText">Åpent </a>
+              <a className="openLight">🟢</a>
+            </>
+          ) : (
+            <>
+              <a className="closedText">Stengt</a>
+              <a className="closeLight"> 🔴</a>
+            </>
+          )}
         </p>
       </div>
       <nav className="navbar">

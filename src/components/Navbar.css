@@ -128,7 +128,6 @@
   }
 
   .Top {
-    /* display: flex; */
     flex-direction: row;
     justify-content: center;
     background-color: rgb(49, 52, 52);
@@ -141,11 +140,13 @@
   .Top p {
     padding: 0;
     font-size: 0.8em;
+    overflow: hidden;
   }
 
   .Top a {
     padding: 0;
     font-size: 0.8em;
+    /* overflow: hidden; */
   }
 
   .phone {
@@ -161,9 +162,9 @@
 }
 
 @media screen and (max-width: 380px) {
-  .RingText {
+  /* .RingText {
     display: none;
-  }
+  } */
 
   .Top a {
     padding: 0;
@@ -173,4 +174,21 @@
     padding: 0;
     font-size: 0.8em;
   }
+}
+
+@media screen and (max-width: 370px) {
+  .openText {
+    display: none;
+  }
+
+  .closedText {
+    display: none;
+  }
+  /* .Top p {
+    overflow: hidden;
+  } */
+
+  /* .Top a {
+    overflow: hidden;
+  } */
 }

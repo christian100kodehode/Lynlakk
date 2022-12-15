@@ -22,7 +22,6 @@ function Video() {
       </p>
       <div className="imageContainer">
         <img className="workImages" src={workdetails3} alt="Work details" />
-        {/* <img className="workImages" src={workdetails} alt="Work details" /> */}
       </div>
     </div>
   );
