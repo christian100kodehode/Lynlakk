@@ -30,6 +30,14 @@
   padding: 1rem;
 }
 
+.hero .content .news > p {
+  font-weight: 800;
+}
+
+.news {
+  padding: 2rem 0;
+}
+
 .hero .content a {
   color: white;
   text-decoration: none;
@@ -37,13 +45,14 @@
 
 /* Get different styled p tags using child elements */
 .hero .content p:first-child {
-  margin-top: 5rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
   font-style: italic;
   font-size: 2rem;
 }
 
 .hero .content p:nth-child(2) {
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: italic;
 }
 
@@ -99,6 +108,10 @@
     height: 70%;
   }
 
+  .news {
+    padding-top: 5rem;
+  }
+
   .hero .content {
     line-height: 2rem;
   }
@@ -123,5 +136,9 @@
 
   .hero .content p:nth-child(3) {
     font-size: 1.2rem;
+  }
+
+  .news {
+    padding-top: 7rem;
   }
 }
