@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="content">
-        <div className="news">
+        {/* <div className="news">
           <p>Info Uke 1 / 2023:</p>
           <p>Ute på oppdrag 07.00 - 13.00. Tilbake i lokalet 13:15.</p>
-        </div>
+        </div> */}
         <p>Uhellet ute?</p>
         <p>Smart Repair - Lakkering av Bil / MC</p>
         <p>Foliering av hel eller deler av bil fra neste år (2023) !</p>
