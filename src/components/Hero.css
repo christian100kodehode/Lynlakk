@@ -28,6 +28,7 @@
   max-width: 1245;
   margin-top: auto;
   padding: 1rem;
+  padding-top: 5rem;
 }
 
 .hero .content .news > p {
@@ -79,6 +80,10 @@
 
 /* For mobile and smaller screens below 940 */
 @media screen and (max-width: 940px) {
+  .hamburger-menu {
+    padding: 0;
+  }
+
   .desktopButton {
     display: none;
   }
@@ -104,9 +109,9 @@
     z-index: -1;
   }
 
-  .hero .content {
+  /* .hero .content {
     height: 70%;
-  }
+  } */
 
   .news {
     padding-top: 5rem;
@@ -114,6 +119,7 @@
 
   .hero .content {
     line-height: 2rem;
+    padding-top: 2rem;
   }
 
   .hero .content p:nth-child(2) {
@@ -140,5 +146,10 @@
 
   .news {
     padding-top: 7rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .header .navbar {
+    padding: 0;
   }
 }

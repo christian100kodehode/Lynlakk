@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 import { useState, useEffect } from "react";
 import { Link, Scroll } from "react-scroll";
+import FbIcon from "./images/FbIcon.jpg";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -64,34 +65,39 @@ const Navbar = () => {
           )}
         </p>
       </div>
-      <nav className="navbar">
-        <Link to="app" onClick={closeMenu} spy={true} smooth={true} offset={-70} duration={500}>
-          <img src={Logo} alt="Lynlakk Logo" className="Logo" />
-        </Link>
+      <div className="HeaderContainer">
+        <nav className="navbar">
+          <Link to="app" onClick={closeMenu} spy={true} smooth={true} offset={-70} duration={500}>
+            <img src={Logo} alt="Lynlakk Logo" className="Logo" />
+          </Link>
 
-        {/* Hamburger Menu icon changing on click */}
-        <div className="hamburger-menu" onClick={handleClick}>
-          {click ? <FaTimes size={30} style={{ color: "#ffffff" }} /> : <FaBars size={30} style={{ color: "#ffffff" }} />}
-        </div>
-        {/* Hamburger Menu show contents or not */}
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <Link to="about" onClick={closeMenu} spy={true} smooth={true} offset={-70} duration={500}>
-              Tjenester
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="video" onClick={closeMenu} spy={true} smooth={true} offset={-70} duration={500}>
-              Om
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="omoss" onClick={closeMenu} spy={true} smooth={true} offset={-70} duration={500}>
-              Besøk
-            </Link>
-          </li>
-        </ul>
-      </nav>
+          {/* Hamburger Menu icon changing on click */}
+          <div className="hamburger-menu" onClick={handleClick}>
+            {click ? <FaTimes size={30} style={{ color: "#ffffff" }} /> : <FaBars size={30} style={{ color: "#ffffff" }} />}
+          </div>
+          {/* Hamburger Menu show contents or not */}
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="about" onClick={closeMenu} spy={true} smooth={true} offset={-70} duration={500}>
+                Tjenester
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="video" onClick={closeMenu} spy={true} smooth={true} offset={-70} duration={500}>
+                Om
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="omoss" onClick={closeMenu} spy={true} smooth={true} offset={-70} duration={500}>
+                Besøk
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <a href="https://facebook.com/Lynlakk" target="_blank" rel="noreferrer">
+          <img src={FbIcon} alt="Facebook Link Lynlakk" className="FbIcon" />
+        </a>
+      </div>
     </div>
   );
 };

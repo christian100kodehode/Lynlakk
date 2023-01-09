@@ -6,6 +6,7 @@
   --overlay: rgb(0, 0, 0, 0.7);
   background-color: black;
   color: white;
+  min-width: 337px;
 }
 
 * {
